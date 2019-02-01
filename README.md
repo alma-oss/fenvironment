@@ -9,9 +9,9 @@ Priority of Environment variables are (_from the most important_):
 
 ## Release
 1. Increment version in `src/Environment.fsproj`
-2. Run `$ fake build target release`
-3. Move Environment package (`Environment.VERSION.nupkg`) from `./release` dir to the NugetServer packages dir
-4. Update `CHANGELOG.md`
+2. Update `CHANGELOG.md`
+3. Commit new version and tag it
+4. Run `$ fake build target release`
 
 ## Development
 ### Requirements
