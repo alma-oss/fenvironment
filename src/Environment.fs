@@ -1,13 +1,10 @@
 module Environment
 
 open System
-open System.IO
 open System.Text.RegularExpressions
 
 // inspired by http://www.codesuji.com/2018/02/28/F-and-DotEnv/
 let private loadDotEnv error envFile =
-    let envFile = Path.Combine(__SOURCE_DIRECTORY__, "..", "..", envFile)
-
     if IO.File.Exists(envFile)
     then
         IO.File.ReadAllLines(envFile)
