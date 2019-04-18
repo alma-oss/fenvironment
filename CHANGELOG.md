@@ -2,6 +2,8 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
+
+## 2.1.0 - 2019-04-18
 - Add functions
     - `merge` - to add/ignore more env variables to current env variables
     - `update` - to add/update more env variables to current env variables

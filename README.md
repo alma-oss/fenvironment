@@ -44,7 +44,7 @@ let mandatory =         // string
 ```
 
 ## Release
-1. Increment version in `src/Environment.fsproj`
+1. Increment version in `Environment.fsproj`
 2. Update `CHANGELOG.md`
 3. Commit new version and tag it
 4. Run `$ fake build target release`
