@@ -38,3 +38,17 @@ let getEnv (envs: Map<string, string>) key =
     match key |> tryGetEnv envs with
     | Some value -> value
     | _ -> failwithf "[Error]: ENV variable \"%s\" was not defined." key
+
+let private combine onSame (currentEnvs: Map<string, string>) (newEnvs: Map<string, string>): Map<string, string> =
+    newEnvs
+    |> Map.fold (fun acc key newValue ->
+        match acc.TryFind key with
+        | Some currentValue -> acc.Add(key, onSame currentValue newValue)
+        | _ -> acc.Add(key, newValue)
+    ) currentEnvs
+
+let merge currentEnvs newEnvs =
+    combine (fun currentValue _newValue -> currentValue) currentEnvs newEnvs
+
+let update currentEnvs newEnvs =
+    combine (fun _currentValue newValue -> newValue) currentEnvs newEnvs
