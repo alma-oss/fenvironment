@@ -2,6 +2,10 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
+- Add `loadFromFile` function to explicitly load variables from file
+- [**BC**] Remove `getEnvs` function to return a `Map` of all currently loaded Environment variables (Key/Value)
+- [**BC**] Change `tryGetEnv` function (_use `Map.tryFind` instead_)
+- [**BC**] Change `getEnv` function (_use `Map.find` instead_)
 
 ## 2.1.0 - 2019-04-18
 - Add functions

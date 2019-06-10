@@ -19,13 +19,16 @@ Where `$NUGET_SERVER_PATH` is the URL of nuget server
 ```fs
 open Environment
 
-let errorLog = printfn "Error: %s"
+result {
+    do! loadFromFile "/file/path/.env"  // load variables from file (or return error if file is not found)
+}
+|> ignore
 
-let envs =
-    ".env"  // .env file name
-    |> getEnvs errorLog
-let getEnv = getEnv envs            // getEnv function with "baked in" parsed env variables
-let tryGetEnv = tryGetEnv envs      // tryGetEnv -||-
+let envs = getEnvs()    // get all loaded variables
+
+// create functions to find in environment keys
+let tryGetEnv key = envs |> Map.tryFind key
+let getEnv key = envs |> Map.find key
 
 let optional =          // string option
     "OPTIONAL_ENV_VAR"

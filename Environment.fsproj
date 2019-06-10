@@ -12,4 +12,8 @@
     <Compile Include="src/Environment.fs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Lmc.ErrorHandling" Version="1.0" />
+  </ItemGroup>
+
 </Project>
