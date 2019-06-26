@@ -2,6 +2,8 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
+
+## 3.1.0 - 2019-06-26
 - Add lint
 
 ## 3.0.0 - 2019-06-10
