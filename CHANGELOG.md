@@ -2,6 +2,7 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
+- Add lint
 
 ## 3.0.0 - 2019-06-10
 - Add `loadFromFile` function to explicitly load variables from file
