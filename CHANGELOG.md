@@ -2,6 +2,11 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
+- Fix parsing environment variables from file, to allow value with `=`
+- Update dependencies
+- [**BC**] Use .netcore 3.1
+- Add `AssemblyInfo`
+- [**BC**] Change namespace to `Lmc.Environment`
 
 ## 3.1.0 - 2019-06-26
 - Add lint

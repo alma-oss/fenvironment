@@ -1,7 +1,8 @@
-module Environment
+module Lmc.Environment
 
 open System
 open System.Text.RegularExpressions
+open Lmc.ErrorHandling
 
 // inspired by http://www.codesuji.com/2018/02/28/F-and-DotEnv/
 let loadFromFile filePath =
@@ -13,7 +14,7 @@ let loadFromFile filePath =
         |> Seq.iter (fun line ->
             let lineWithoutComments = Regex.Replace(line, "#.*", "")
             let parts =
-                lineWithoutComments.Split('=')
+                lineWithoutComments.Split('=', 2)
                 |> Array.map (fun x -> x.Trim())
 
             match parts with
