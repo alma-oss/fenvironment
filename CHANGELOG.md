@@ -2,6 +2,8 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
+
+## 4.0.0 - 2020-11-23
 - Fix parsing environment variables from file, to allow value with `=`
 - Update dependencies
 - [**BC**] Use .netcore 3.1
