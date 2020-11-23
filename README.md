@@ -11,7 +11,7 @@ Priority of Environment variables are (_from the most important_):
 
 Add following into `paket.dependencies`
 ```
-git ssh://git@stash.int.lmc.cz:7999/archi/nuget-server.git master Packages: /nuget/
+git ssh://git@bitbucket.lmc.cz:7999/archi/nuget-server.git master Packages: /nuget/
 # LMC Nuget dependencies:
 nuget Lmc.Environment
 ```
@@ -23,7 +23,7 @@ Lmc.Environment
 
 ## Use
 ```fs
-open Environment
+open Lmc.Environment
 
 result {
     do! loadFromFile "/file/path/.env"  // load variables from file (or return error if file is not found)
