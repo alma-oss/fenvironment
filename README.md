@@ -26,11 +26,11 @@ Lmc.Environment
 open Lmc.Environment
 
 result {
-    do! loadFromFile "/file/path/.env"  // load variables from file (or return error if file is not found)
+    do! Envs.loadFromFile "/file/path/.env"  // load variables from file (or return error if file is not found)
 }
 |> ignore
 
-let envs = getEnvs()    // get all loaded variables
+let envs = Envs.getAll()    // get all loaded variables
 
 // create functions to find in environment keys
 let tryGetEnv key = envs |> Map.tryFind key

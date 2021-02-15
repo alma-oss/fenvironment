@@ -2,6 +2,9 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
+- [**BC**] Rename `getEnvs` to `getAll`
+- [**BC**] Move all functions to Module `Envs`
+- Update dependencies
 
 ## 5.0.0 - 2020-11-23
 - [**BC**] Use .netcore 5.0
