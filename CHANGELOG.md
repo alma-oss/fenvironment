@@ -3,6 +3,7 @@
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
 
+## 6.0.1- 2021-10-25
 - Fix .net version
 
 ## 6.0.0 - 2021-10-25
