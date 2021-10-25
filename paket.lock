@@ -1,7 +1,16 @@
 RESTRICTION: == net5.0
 NUGET
   remote: https://api.nuget.org/v3/index.json
+    Expecto (9.0.4)
+      FSharp.Core (>= 4.6)
+      Mono.Cecil (>= 0.11.3)
     FSharp.Core (6.0)
+    Mono.Cecil (0.11.4)
+    System.Collections.Immutable (5.0)
+    YoloDev.Expecto.TestSdk (0.12.11)
+      Expecto (>= 9.0 < 10.0)
+      FSharp.Core (>= 4.6)
+      System.Collections.Immutable (>= 1.5)
   remote: paket-files/git_bitbucket.lmc.cz7999/archi/nuget-server/nuget
     Lmc.ErrorHandling (5.1.0)
       FSharp.Core (>= 5.0.2)

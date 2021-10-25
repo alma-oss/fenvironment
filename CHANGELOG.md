@@ -5,6 +5,12 @@
 - [**BC**] Rename `getEnvs` to `getAll`
 - [**BC**] Move all functions to Module `Envs`
 - Update dependencies
+- Add `Envs.set` function
+- Add `Envs.tryGetRaw` function
+- Add `Envs.tryResolve` function
+- Add `Envs.clear` function
+- [**BC**] Rename function `loadFromFile` to `Envs.loadRawFromFile`
+- Add `Envs.loadResolvedFromFile` function
 
 ## 5.0.0 - 2020-11-23
 - [**BC**] Use .netcore 5.0

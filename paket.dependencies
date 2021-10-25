@@ -7,6 +7,9 @@ git ssh://git@bitbucket.lmc.cz:7999/archi/nuget-server.git master Packages: /nug
 # LMC Nuget dependencies:
 nuget Lmc.ErrorHandling ~> 5.1
 
+nuget Expecto
+nuget YoloDev.Expecto.TestSdk
+
 // [ FAKE GROUP ]
 group Build
     storage none
