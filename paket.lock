@@ -4,7 +4,7 @@ NUGET
     Expecto (9.0.4)
       FSharp.Core (>= 4.6)
       Mono.Cecil (>= 0.11.3)
-    FSharp.Core (6.0)
+    FSharp.Core (5.0.2)
     Mono.Cecil (0.11.4)
     System.Collections.Immutable (5.0)
     YoloDev.Expecto.TestSdk (0.12.11)
@@ -16,7 +16,7 @@ NUGET
       FSharp.Core (>= 5.0.2)
 GIT
   remote: ssh://git@bitbucket.lmc.cz:7999/archi/nuget-server.git
-     (8c1a7b0c50eaf4dd8fe1948d4e0ffe047bf88b57)
+     (11201c4edbd7c2c05188a3375ad4525186fd70c1)
       path: /nuget/
 GROUP Build
 STORAGE: NONE
