@@ -1,10 +1,10 @@
-namespace Lmc.Environment
+namespace Alma.Environment
 
 [<RequireQualifiedAccess>]
 module Envs =
     open System
     open System.Text.RegularExpressions
-    open Lmc.ErrorHandling
+    open Alma.ErrorHandling
 
     [<AutoOpen>]
     module internal LowLevel =

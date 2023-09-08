@@ -1,10 +1,10 @@
-module Lmc.Environment.ResolvingDotEnvs
+module Alma.Environment.ResolvingDotEnvs
 
 open System
 open System.IO
 open Expecto
-open Lmc.ErrorHandling
-open Lmc.Environment
+open Alma.ErrorHandling
+open Alma.Environment
 
 let private tee f a =
     f a
