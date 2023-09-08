@@ -1,4 +1,4 @@
-namespace Lmc.Environment
+namespace Alma.Environment
 
 [<AutoOpen>]
 module internal Regex =
