@@ -2,7 +2,9 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
-- Move repository
+
+## 12.0.0 - 2025-11-28
+- [**BC**] Move repository
 
 ## 11.1.0 - 2025-03-17
 - Update dependencies
