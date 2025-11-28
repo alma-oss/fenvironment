@@ -4,7 +4,7 @@ namespace Alma.Environment
 module Envs =
     open System
     open System.Text.RegularExpressions
-    open Alma.ErrorHandling
+    open Feather.ErrorHandling
 
     [<AutoOpen>]
     module internal LowLevel =

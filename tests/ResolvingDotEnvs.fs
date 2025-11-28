@@ -3,7 +3,7 @@ module Alma.Environment.ResolvingDotEnvs
 open System
 open System.IO
 open Expecto
-open Alma.ErrorHandling
+open Feather.ErrorHandling
 open Alma.Environment
 
 let private tee f a =
