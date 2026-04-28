@@ -2,6 +2,8 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Add, Changed, Fix, Removed) should be Add as needed. -->
 ## Unreleased
+
+## 13.1.0 - 2026-04-28
 - Add `Envs.forceLoadResolvedFromFile` function
 
 ## 13.0.0 - 2026-01-28
