@@ -154,6 +154,15 @@ let shouldResolveEnvironmentVariables =
                 Expect.equal resolved expectedValue $"Environment value ${key} should be resolved"
             )
 
+        testCase "Force load overrides existing env vars" <| fun _ ->
+            let key = "DOMAIN"
+            Envs.set (key, "overridden")
+            Expect.equal (Envs.tryGetRaw key) (Some "overridden") "Precondition: DOMAIN should be set to overridden"
+
+            Envs.forceLoadResolvedFromFile "./Fixtures/.env" |> Result.orFail
+
+            Expect.equal (Envs.tryGetRaw key) (Some "domain") "DOMAIN should be overridden by value from .env file"
+
         testCase "Raw from file and global envs with wrong order resolved later" <| fun _ ->
             defineExpected [
                 "DOMAIN", "domain"

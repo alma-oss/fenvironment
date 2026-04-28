@@ -69,7 +69,7 @@ module Envs =
             set key (RawValue null)
 
     /// Inspired by http://www.codesuji.com/2018/02/28/F-and-DotEnv/
-    let private loadFromFileAndResolve resolve filePath =
+    let private loadFromFileAndResolve resolve overrideExisting filePath =
         result {
             if IO.File.Exists(filePath) |> not then
                 return! Error (sprintf "File %s does not exists." filePath)
@@ -82,7 +82,7 @@ module Envs =
                     |> Array.map (fun x -> x.Trim())
 
                 match parts with
-                | [| key; value |] when tryGet (Key key) = None ->
+                | [| key; value |] when overrideExisting || tryGet (Key key) = None ->
                     value.Trim([|'"'; '''|])
                     |> RawValue
                     |> resolve
@@ -94,12 +94,17 @@ module Envs =
     /// <summary>
     /// It will load all values from a file.
     /// </summary>
-    let loadRawFromFile = loadFromFileAndResolve id
+    let loadRawFromFile = loadFromFileAndResolve id false
 
     /// <summary>
     /// It will load all values from a file and resolve.
     /// </summary>
-    let loadResolvedFromFile = loadFromFileAndResolve resolveValue
+    let loadResolvedFromFile = loadFromFileAndResolve resolveValue false
+
+    /// <summary>
+    /// It will load all values from a file, resolve them, and override any existing environment variables.
+    /// </summary>
+    let forceLoadResolvedFromFile = loadFromFileAndResolve resolveValue true
 
     let set (key, value) = set (Key key) (RawValue value)
 
