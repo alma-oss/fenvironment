@@ -23,7 +23,9 @@ Alma.Environment
 open Alma.Environment
 
 result {
-    do! Envs.loadFromFile "/file/path/.env"  // load variables from file (or return error if file is not found)
+    do! Envs.loadResolvedFromFile "/file/path/.env"  // load and resolve variables from file; existing env vars take priority
+    // or
+    do! Envs.forceLoadResolvedFromFile "/file/path/.env"  // load and resolve variables from file; overrides existing env vars
 }
 |> ignore
 
