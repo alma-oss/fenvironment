@@ -1,0 +1,113 @@
+lockfile_version: '1'
+dependencies: []
+deployments:
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fenvironment
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fenvironment/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:ce4dae48234ecd6a6207a4c14e46895bd579773c803a51c0ecd9b54b237ec636
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fenvironment/references/anti-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:4ad6b1115cbacedf09e9f59ead861b1fce0781d52f69e37a03a4e2a127e2ea09
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fenvironment/references/examples.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:65fbe0610b441493ac00bf3ad8abef1a9de5fab87a76f491c5c56fe3bd630c1a
+- kind: project-relative
+  target: claude
+  value: .claude/skills/fenvironment/references/preferred-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:cfa87c855ea8f43a1a307338bca7661b5dfdaa1cc5b0a11ca1314f359f36dd45
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/fenvironment
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/fenvironment/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:ce4dae48234ecd6a6207a4c14e46895bd579773c803a51c0ecd9b54b237ec636
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/fenvironment/references/anti-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:4ad6b1115cbacedf09e9f59ead861b1fce0781d52f69e37a03a4e2a127e2ea09
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/fenvironment/references/examples.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:65fbe0610b441493ac00bf3ad8abef1a9de5fab87a76f491c5c56fe3bd630c1a
+- kind: project-relative
+  target: legacy
+  value: .agents/skills/fenvironment/references/preferred-patterns.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:cfa87c855ea8f43a1a307338bca7661b5dfdaa1cc5b0a11ca1314f359f36dd45
+local_deployed_files:
+- .agents/skills/fenvironment
+- .agents/skills/fenvironment/SKILL.md
+- .agents/skills/fenvironment/references/anti-patterns.md
+- .agents/skills/fenvironment/references/examples.md
+- .agents/skills/fenvironment/references/preferred-patterns.md
+- .claude/skills/fenvironment
+- .claude/skills/fenvironment/SKILL.md
+- .claude/skills/fenvironment/references/anti-patterns.md
+- .claude/skills/fenvironment/references/examples.md
+- .claude/skills/fenvironment/references/preferred-patterns.md
+local_deployed_file_hashes:
+  .agents/skills/fenvironment/SKILL.md: sha256:ce4dae48234ecd6a6207a4c14e46895bd579773c803a51c0ecd9b54b237ec636
+  .agents/skills/fenvironment/references/anti-patterns.md: sha256:4ad6b1115cbacedf09e9f59ead861b1fce0781d52f69e37a03a4e2a127e2ea09
+  .agents/skills/fenvironment/references/examples.md: sha256:65fbe0610b441493ac00bf3ad8abef1a9de5fab87a76f491c5c56fe3bd630c1a
+  .agents/skills/fenvironment/references/preferred-patterns.md: sha256:cfa87c855ea8f43a1a307338bca7661b5dfdaa1cc5b0a11ca1314f359f36dd45
+  .claude/skills/fenvironment/SKILL.md: sha256:ce4dae48234ecd6a6207a4c14e46895bd579773c803a51c0ecd9b54b237ec636
+  .claude/skills/fenvironment/references/anti-patterns.md: sha256:4ad6b1115cbacedf09e9f59ead861b1fce0781d52f69e37a03a4e2a127e2ea09
+  .claude/skills/fenvironment/references/examples.md: sha256:65fbe0610b441493ac00bf3ad8abef1a9de5fab87a76f491c5c56fe3bd630c1a
+  .claude/skills/fenvironment/references/preferred-patterns.md: sha256:cfa87c855ea8f43a1a307338bca7661b5dfdaa1cc5b0a11ca1314f359f36dd45
