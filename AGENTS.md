@@ -1,5 +1,9 @@
 # AGENTS.md — Alma.Environment
 
+## Agent Skills
+
+This repo ships Agent Skill for the `Alma.Environment` library. Compatible agents discover it automatically; see `.agents/skills/fenvironment/SKILL.md`.
+
 ## Project Purpose
 
 F# library for resolving environment variables with a priority chain: exported environment variables take precedence over values defined in `.env` files. Published as NuGet package `Alma.Environment`.
