@@ -6,6 +6,8 @@ open Expecto
 open Feather.ErrorHandling
 open Alma.Environment
 
+let private fixture file = Path.Combine(__SOURCE_DIRECTORY__, "Fixtures", file)
+
 let private tee f a =
     f a
     a
@@ -36,7 +38,7 @@ let shouldResolveEnvironmentVariables =
                 "BOX", "$SPOT@$INSTANCE"
             ]
 
-            Envs.loadRawFromFile "./Fixtures/.env" |> Result.orFail
+            Envs.loadRawFromFile (fixture ".env") |> Result.orFail
             let envs = Envs.getAll()
 
             expected
@@ -57,7 +59,7 @@ let shouldResolveEnvironmentVariables =
                 "BOX", "all,common@domain.context.purpose.123"
             ]
 
-            Envs.loadResolvedFromFile "./Fixtures/.env" |> Result.orFail
+            Envs.loadResolvedFromFile (fixture ".env") |> Result.orFail
             let envs = Envs.getAll()
 
             expected
@@ -79,7 +81,7 @@ let shouldResolveEnvironmentVariables =
             ]
             |> ignore
 
-            Envs.loadRawFromFile "./Fixtures/.env" |> Result.orFail
+            Envs.loadRawFromFile (fixture ".env") |> Result.orFail
 
             let expectedResolved = defineExpected [
                 "NEW_BOX", "old: all,common@domain.context.purpose.123"
@@ -111,7 +113,7 @@ let shouldResolveEnvironmentVariables =
                 "BOX", "@"
             ]
 
-            Envs.loadResolvedFromFile "./Fixtures/.env-wrong-order" |> Result.orFail
+            Envs.loadResolvedFromFile (fixture ".env-wrong-order") |> Result.orFail
             let envs = Envs.getAll()
 
             expected
@@ -133,7 +135,7 @@ let shouldResolveEnvironmentVariables =
             ]
             |> ignore
 
-            Envs.loadResolvedFromFile "./Fixtures/.env-wrong-order" |> Result.orFail
+            Envs.loadResolvedFromFile (fixture ".env-wrong-order") |> Result.orFail
 
             let expectedResolved = defineExpected [
                 "NEW_BOX", "old: @"
@@ -159,7 +161,7 @@ let shouldResolveEnvironmentVariables =
             Envs.set (key, "overridden")
             Expect.equal (Envs.tryGetRaw key) (Some "overridden") "Precondition: DOMAIN should be set to overridden"
 
-            Envs.forceLoadResolvedFromFile "./Fixtures/.env" |> Result.orFail
+            Envs.forceLoadResolvedFromFile (fixture ".env") |> Result.orFail
 
             Expect.equal (Envs.tryGetRaw key) (Some "domain") "DOMAIN should be overridden by value from .env file"
 
@@ -175,7 +177,7 @@ let shouldResolveEnvironmentVariables =
             ]
             |> ignore
 
-            Envs.loadRawFromFile "./Fixtures/.env-wrong-order" |> Result.orFail
+            Envs.loadRawFromFile (fixture ".env-wrong-order") |> Result.orFail
 
             let expectedResolved = defineExpected [
                 "NEW_BOX", "old: all,common@domain.context.purpose.123"
