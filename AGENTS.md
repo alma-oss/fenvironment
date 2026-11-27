@@ -93,7 +93,7 @@ Clean → AssemblyInfo → Build → Lint → Tests → Release → Publish
 
 - **tests.yaml** — runs on PRs and nightly (`0 3 * * *`), sets up .NET 10.x, runs `./build.sh -t tests`
 - **pr-check.yaml** — blocks fixup commits from merging, runs ShellCheck on shell scripts
-- **publish.yaml** — triggers on semver tags (e.g., `13.0.0`), publishes to NuGet.org using `NUGET_API_KEY` secret
+- **publish.yaml** — triggers on semver tags (e.g., `13.0.0`), publishes to NuGet.org using NuGet trusted publishing (`NuGet/login`, `NUGET_USER` secret)
 
 ## Release Process
 
